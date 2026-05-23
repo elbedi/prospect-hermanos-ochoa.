@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>El Menú | Taquería Hermanos Ochoa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#ffdea5",
+              "on-background": "#1b1c1c",
+              "surface-tint": "#a73922",
+              "surface-dim": "#dcd9d9",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary-container": "#6c4d00",
+              "inverse-primary": "#ffb4a4",
+              "surface-bright": "#fcf9f8",
+              secondary: "#7b5800",
+              error: "#ba1a1a",
+              "primary-fixed": "#ffdad3",
+              "on-surface": "#1b1c1c",
+              "on-secondary-fixed-variant": "#5d4200",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f0eded",
+              primary: "#a43720",
+              background: "#fcf9f8",
+              surface: "#fcf9f8",
+              "tertiary-fixed": "#8ff2fe",
+              tertiary: "#00666f",
+              "secondary-fixed-dim": "#fdbb24",
+              "surface-container-high": "#eae7e7",
+              "on-primary-fixed": "#3d0600",
+              "on-primary-fixed-variant": "#86220c",
+              "on-tertiary-fixed": "#001f23",
+              "secondary-container": "#fdbb24",
+              "inverse-surface": "#303030",
+              "on-surface-variant": "#58423d",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "surface-container-highest": "#e4e2e1",
+              "primary-container": "#c54f35",
+              "tertiary-container": "#00818c",
+              "on-error-container": "#93000a",
+              outline: "#8b716c",
+              "tertiary-fixed-dim": "#72d5e1",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f0f0",
+              "primary-fixed-dim": "#ffb4a4",
+              "outline-variant": "#dfc0b9",
+              "on-tertiary-fixed-variant": "#004f56",
+              "on-secondary-fixed": "#271900",
+              "on-tertiary-container": "#f6feff",
+              "surface-variant": "#e4e2e1",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "brand-terracotta": "#c54f35",
+              "brand-orange": "#e65100",
+              "brand-mustard": "#fdbb24",
+              "brand-lime": "#9ccc65",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "section-gap": "80px",
+              unit: "8px",
+              "margin-mobile": "16px",
+              "margin-desktop": "64px",
+            },
+            fontFamily: {
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Bricolage Grotesque"],
+              "headline-md": ["Bricolage Grotesque"],
+              "headline-lg": ["Bricolage Grotesque"],
+              "headline-lg-mobile": ["Bricolage Grotesque"],
+              "label-bold": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "body-md": [
+                "16px",
+                {
+                  lineHeight: "1.6",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "48px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "1.3",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "1.2",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-lg-mobile": [
+                "28px",
+                {
+                  lineHeight: "1.2",
+                  fontWeight: "800",
+                },
+              ],
+              "label-bold": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "1.6",
+                  fontWeight: "500",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .texture-bg {
+        background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.05"/%3E%3C/svg%3E');
+      }
+      .sticker-shadow {
+        box-shadow: 4px 4px 0px 0px rgba(27, 28, 28, 1);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md texture-bg selection:bg-secondary-container selection:text-on-secondary-container"
+  >
+    <nav
+      class="bg-surface border-b-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(27,28,28,1)] flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full sticky top-0 z-50 relative"
+    >
+      <a
+        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tighter italic"
+        href="index.html"
+      >
+        Hermanos Ochoa
+      </a>
+      <div class="hidden md:flex gap-gutter items-center">
+        <a
+          class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary"
+          href="menu.html"
+          >El Menú</a
+        >
+        <a
+          class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors hover:scale-105 hover:rotate-1 duration-200"
+          href="index.html"
+          >Inicio</a
+        >
+        <a
+          class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors hover:scale-105 hover:rotate-1 duration-200"
+          href="index.html#ubicacion"
+          >Ubicación</a
+        >
+        <button
+          class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 border-2 border-on-surface shadow-[4px_4px_0px_0px_rgba(27,28,28,1)] hover:translate-y-1 hover:shadow-none transition-all uppercase tracking-wide"
+        >
+          Pedir por WhatsApp
+        </button>
+      </div>
+      <button
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Abrir menú"
+        class="md:hidden text-primary"
+        id="mobile-menu-toggle"
+        type="button"
+      >
+        <span
+          class="material-symbols-outlined"
+          style="font-variation-settings: 'FILL' 1;"
+          id="mobile-menu-icon"
+          >menu</span
+        >
+      </button>
+      <div
+        class="hidden md:hidden absolute top-full left-0 w-full bg-surface border-t-4 border-on-surface border-b-4 shadow-[8px_8px_0px_0px_rgba(27,28,28,1)] px-margin-mobile py-4"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col gap-4">
+          <a
+            class="font-body-md text-body-md text-primary font-bold"
+            href="menu.html"
+            >El Menú</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+            href="index.html"
+            >Inicio</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+            href="index.html#historia"
+            >Nuestra Historia</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+            href="index.html#ubicacion"
+            >Ubicación</a
+          >
+          <button
+            class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 border-2 border-on-surface shadow-[4px_4px_0px_0px_rgba(27,28,28,1)] uppercase tracking-wide text-left"
+            type="button"
+          >
+            Pedir por WhatsApp
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section
+        class="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop border-b-8 border-on-surface relative"
+        id="menu"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h1
+              class="font-headline-xl text-headline-xl text-on-surface uppercase inline-block bg-brand-mustard px-6 py-2 border-4 border-on-surface sticker-shadow transform rotate-1"
+            >
+              📋 El Menú
+            </h1>
+            <p
+              class="font-body-lg text-body-lg mt-6 text-on-surface-variant font-bold max-w-2xl mx-auto"
+            >
+              Para el hambre chiquita y para el apetito voraz. Todo preparado al
+              momento.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-brand-orange text-on-primary px-4 py-1 border-4 border-on-surface transform -rotate-3 font-headline-md uppercase"
+              >
+                🌮 Tacos
+              </h2>
+              <div class="mt-6 space-y-3">
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Al Pastor</span
+                  ><span class="font-headline-md text-primary">$14</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Suadero</span
+                  ><span class="font-headline-md text-primary">$14</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Trozo de Suadero</span
+                  ><span class="font-headline-md text-primary">$45</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Longaniza</span
+                  ><span class="font-headline-md text-primary">$14</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Tripa</span
+                  ><span class="font-headline-md text-primary">$20</span>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">Cabeza</p>
+                  <p class="text-sm text-on-surface-variant">
+                    cachete, ojo, trompa, surtida
+                  </p>
+                  <p class="font-headline-md text-primary">$14</p>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Macisa</span
+                  ><span class="font-headline-md text-primary">$20</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Sesos</span
+                  ><span class="font-headline-md text-primary">$20</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span class="font-bold">Lengua</span
+                  ><span class="font-headline-md text-primary">$30</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-brand-lime text-on-surface px-4 py-1 border-4 border-on-surface transform rotate-2 font-headline-md uppercase"
+              >
+                🧅 Especialidades y Complementos
+              </h2>
+              <div class="mt-8 space-y-3">
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Cebollas Especiales</span
+                  ><span class="font-headline-md text-primary">$40</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Cebollas Normales</span
+                  ><span class="font-headline-md text-primary">$35</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Orden de Nopales</span
+                  ><span class="font-headline-md text-primary">$30</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Tortillas de Harina</span
+                  ><span class="font-headline-md text-primary">$25</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Tortilla de Maiz</span
+                  ><span class="font-headline-md text-primary">$15</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span class="font-bold">Volcanes (3)</span
+                  ><span class="font-headline-md text-primary">$70</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform bg-brand-mustard/20"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-brand-terracotta text-on-primary px-4 py-1 border-4 border-on-surface transform -rotate-1 font-headline-md uppercase"
+              >
+                🥩 Alambres
+              </h2>
+              <div class="mt-6 space-y-3">
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">Alambre Especial Ochoa</p>
+                  <p class="text-sm text-on-surface-variant">
+                    bisteck, chuleta, pastor, tocino, chile morron, cebolla,
+                    quesos
+                  </p>
+                  <p class="font-headline-md text-primary">$290</p>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">Alambre Ochoita</p>
+                  <p class="text-sm text-on-surface-variant">
+                    bisteck/chuleta/pastor, tocino, chile morron, cebolla, queso
+                  </p>
+                  <p class="font-headline-md text-primary">$210</p>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">Alambre Hawaiano</p>
+                  <p class="text-sm text-on-surface-variant">
+                    chuleta, jamon, pina, queso
+                  </p>
+                  <p class="font-headline-md text-primary">$190</p>
+                </div>
+                <div>
+                  <p class="font-bold">Costilla con Frijoles Charros</p>
+                  <p class="text-sm text-on-surface-variant">
+                    cebolla asada, nopales, chile toreado, aguacate, jitomate
+                  </p>
+                  <p class="font-headline-md text-primary">$190</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-primary text-on-primary px-4 py-1 border-4 border-on-surface transform rotate-3 font-headline-md uppercase"
+              >
+                🥓 Bisteck
+              </h2>
+              <div class="mt-6 space-y-3">
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Bisteck (2)</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Bisteck con Queso (2)</span
+                  ><span class="font-headline-md text-primary">$80</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Bisteck con Nopales (2)</span
+                  ><span class="font-headline-md text-primary">$80</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span class="font-bold">Bisteck Encebollado (2)</span
+                  ><span class="font-headline-md text-primary">$80</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-secondary-fixed-dim text-on-surface px-4 py-1 border-4 border-on-surface transform -rotate-2 font-headline-md uppercase"
+              >
+                🍖 Costilla
+              </h2>
+              <div class="mt-6 space-y-3">
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Costilla (2)</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Costilla con Queso (2)</span
+                  ><span class="font-headline-md text-primary">$80</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Costilla con Nopales (2)</span
+                  ><span class="font-headline-md text-primary">$80</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span class="font-bold">Costilla Encebollada (2)</span
+                  ><span class="font-headline-md text-primary">$80</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform bg-tertiary-fixed-dim/20"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-tertiary text-on-primary px-4 py-1 border-4 border-on-surface transform rotate-1 font-headline-md uppercase"
+              >
+                🐷 Chuleta
+              </h2>
+              <div class="mt-6 space-y-3">
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Chuleta (2)</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Chuleta con Queso (2)</span
+                  ><span class="font-headline-md text-primary">$80</span>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">Tocinada (2)</p>
+                  <p class="text-sm text-on-surface-variant">
+                    chuleta, tocino y queso
+                  </p>
+                  <p class="font-headline-md text-primary">$80</p>
+                </div>
+                <div>
+                  <p class="font-bold">Hawaiano (2)</p>
+                  <p class="text-sm text-on-surface-variant">
+                    chuleta, jamon, pina y queso
+                  </p>
+                  <p class="font-headline-md text-primary">$80</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-brand-orange text-on-primary px-4 py-1 border-4 border-on-surface transform -rotate-2 font-headline-md uppercase"
+              >
+                🧀 Especialidades con Queso
+              </h2>
+              <div class="mt-8 space-y-3">
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Gringas</span
+                  ><span class="font-headline-md text-primary">$70</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Sicronizadas (3)</span
+                  ><span class="font-headline-md text-primary">$70</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Queso Fundido</span
+                  ><span class="font-headline-md text-primary">$65</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Queso con Champinones</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Queso a la Mexicana</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Queso Bravo</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Queso Carne</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Choriqueso</span
+                  ><span class="font-headline-md text-primary">$75</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span class="font-bold">Nopal Gratinado</span
+                  ><span class="font-headline-md text-primary">$50</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform bg-brand-mustard/20"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-brand-lime text-on-surface px-4 py-1 border-4 border-on-surface transform rotate-2 font-headline-md uppercase"
+              >
+                🫘 Frijoles Charros
+              </h2>
+              <div class="mt-6 space-y-3">
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span class="font-bold">Frijoles Charros</span
+                  ><span class="font-headline-md text-primary">$45</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span class="font-bold">Frijoles Charros con Carne</span
+                  ><span class="font-headline-md text-primary">$55</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-primary text-on-primary px-4 py-1 border-4 border-on-surface transform -rotate-1 font-headline-md uppercase"
+              >
+                🌮 Tortas
+              </h2>
+              <div class="mt-6 space-y-3 text-on-surface-variant">
+                <p class="font-bold text-on-surface">Opciones:</p>
+                <p>
+                  Suadero, Al Pastor, Campechana, Bisteck, Costilla, Chuleta
+                </p>
+                <div
+                  class="border-t-2 border-dashed border-outline-variant pt-3"
+                >
+                  <div class="flex justify-between gap-4">
+                    <span class="font-bold text-on-surface">Normal</span
+                    ><span class="font-headline-md text-primary">$50</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span class="font-bold text-on-surface">Con queso</span
+                    ><span class="font-headline-md text-primary">$55</span>
+                  </div>
+                </div>
+                <div
+                  class="border-t-2 border-dashed border-outline-variant pt-3"
+                >
+                  <p class="font-bold text-on-surface">Especiales</p>
+                  <div class="flex justify-between gap-4">
+                    <span class="font-bold text-on-surface">Costilla</span
+                    ><span class="font-headline-md text-primary">$75</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span class="font-bold text-on-surface">Chuleta</span
+                    ><span class="font-headline-md text-primary">$75</span>
+                  </div>
+                </div>
+                <p class="text-sm">
+                  Incluyen: frijoles, aguacate, cebolla, chipotle y queso.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-secondary-fixed-dim text-on-surface px-4 py-1 border-4 border-on-surface transform rotate-2 font-headline-md uppercase"
+              >
+                🍔 Hamburguesas
+              </h2>
+              <div class="mt-6 space-y-3">
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">
+                    Sencilla - <span class="text-primary">$55</span>
+                  </p>
+                  <p class="text-sm text-on-surface-variant">
+                    Lechuga, tomate, queso amarillo, queso Oaxaca y aderezos.
+                  </p>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">
+                    Hawaiana - <span class="text-primary">$65</span>
+                  </p>
+                  <p class="text-sm text-on-surface-variant">
+                    Lechuga, tomate, cebolla, queso amarillo, queso Oaxaca,
+                    jamon, pina y aderezos.
+                  </p>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">
+                    Mexicana - <span class="text-primary">$70</span>
+                  </p>
+                  <p class="text-sm text-on-surface-variant">
+                    Lechuga, tomate, aguacate, cebolla, queso Oaxaca, chorizo y
+                    aderezos.
+                  </p>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">
+                    Al Pastor - <span class="text-primary">$75</span>
+                  </p>
+                  <p class="text-sm text-on-surface-variant">
+                    Lechuga, aguacate, cebolla, pastor, pina, jamon, queso
+                    amarillo, queso Oaxaca y aderezos.
+                  </p>
+                </div>
+                <div>
+                  <p class="font-bold">
+                    Especial - <span class="text-primary">$75</span>
+                  </p>
+                  <p class="text-sm text-on-surface-variant">
+                    Lechuga, jitomate, cebolla, aguacate, tocino, salchicha,
+                    jamon, queso amarillo, queso Oaxaca y aderezos.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform bg-tertiary-fixed-dim/20"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-tertiary text-on-primary px-4 py-1 border-4 border-on-surface transform -rotate-1 font-headline-md uppercase"
+              >
+                🥙 Cemitas y Hot Dogs
+              </h2>
+              <div class="mt-8 space-y-3 text-on-surface-variant">
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold text-on-surface">Cemitas</p>
+                  <p class="font-headline-md text-primary">$80</p>
+                  <p class="text-sm">
+                    Opciones: Suadero, Al Pastor, Campechana, Bisteck, Costilla,
+                    Chuleta.
+                  </p>
+                  <p class="text-sm">
+                    Incluyen: frijoles, aguacate, cebolla, chipotle, queso y
+                    papalo.
+                  </p>
+                </div>
+                <p class="font-bold text-on-surface">Hot Dogs</p>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span>Normal</span
+                  ><span class="font-headline-md text-primary">$25</span>
+                </div>
+                <div
+                  class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <span>Con Quesillo</span
+                  ><span class="font-headline-md text-primary">$30</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span>Hawaiano</span
+                  ><span class="font-headline-md text-primary">$35</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-brand-orange text-on-primary px-4 py-1 border-4 border-on-surface transform rotate-2 font-headline-md uppercase"
+              >
+                🥤 Bebidas
+              </h2>
+              <div class="mt-6 space-y-3 text-on-surface-variant">
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold text-on-surface">
+                    Aguas de Fruta de Temporada
+                  </p>
+                  <p class="text-sm">
+                    Sabores: pina, papaya, guayaba, melon, limon, naranja,
+                    fresa, avena.
+                  </p>
+                  <p class="text-sm">Jarra $65 | Litro $40 | Medio litro $30</p>
+                </div>
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold text-on-surface">Licuados</p>
+                  <p class="text-sm">
+                    Sabores: fresa, platano, chocolate, avena.
+                  </p>
+                  <p class="text-sm">Litro $50 | Medio litro $40</p>
+                </div>
+                <div>
+                  <p class="font-bold text-on-surface">Jugos</p>
+                  <p class="text-sm">
+                    Naranja litro $80 | Naranja medio litro $40
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-surface border-4 border-on-surface p-6 sticker-shadow relative hover:-translate-y-2 transition-transform"
+            >
+              <h2
+                class="absolute -top-4 -left-4 bg-brand-lime text-on-surface px-4 py-1 border-4 border-on-surface transform -rotate-2 font-headline-md uppercase"
+              >
+                🍓 Refrescos y Postres
+              </h2>
+              <div class="mt-8 space-y-3">
+                <div
+                  class="border-b-2 border-dashed border-outline-variant pb-2"
+                >
+                  <p class="font-bold">Refrescos</p>
+                  <div class="grid grid-cols-2 gap-2 mt-2 text-sm">
+                    <p>
+                      Coca-Cola <span class="text-primary font-bold">$25</span>
+                    </p>
+                    <p>Boing <span class="text-primary font-bold">$25</span></p>
+                    <p>
+                      Pascual <span class="text-primary font-bold">$25</span>
+                    </p>
+                    <p>
+                      Sidral <span class="text-primary font-bold">$30</span>
+                    </p>
+                    <p>
+                      Agua Mineral
+                      <span class="text-primary font-bold">$25</span>
+                    </p>
+                    <p>Cafe <span class="text-primary font-bold">$25</span></p>
+                    <p>
+                      Cerveza <span class="text-primary font-bold">$35</span>
+                    </p>
+                  </div>
+                  <p class="text-sm text-on-surface-variant mt-2">
+                    Marcas de cerveza: Negra Modelo, Corona, Victoria.
+                  </p>
+                </div>
+                <div>
+                  <p class="font-bold">Postres</p>
+                  <div
+                    class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                  >
+                    <span>Fresas con crema</span
+                    ><span class="font-headline-md text-primary">$50</span>
+                  </div>
+                  <div
+                    class="flex justify-between gap-4 border-b-2 border-dashed border-outline-variant pb-2"
+                  >
+                    <span>Duraznos con crema</span
+                    ><span class="font-headline-md text-primary">$50</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span>Coctel de frutas</span
+                    ><span class="font-headline-md text-primary">$50</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-on-surface w-full flex flex-col md:flex-row justify-between items-center gap-gutter px-margin-mobile md:px-margin-desktop py-12 relative overflow-hidden"
+    >
+      <div
+        class="font-headline-md text-headline-md text-secondary-container relative z-10"
+      >
+        Hermanos Ochoa
+      </div>
+      <div class="flex flex-wrap justify-center gap-gutter relative z-10">
+        <a
+          class="font-body-md text-body-md text-surface-variant hover:text-secondary-container transition-colors focus:underline decoration-2 underline-offset-4"
+          href="index.html"
+          >Inicio</a
+        >
+        <a
+          class="font-body-md text-body-md text-surface-variant hover:text-secondary-container transition-colors focus:underline decoration-2 underline-offset-4"
+          href="menu.html"
+          >Menú</a
+        >
+        <a
+          class="font-body-md text-body-md text-surface-variant hover:text-secondary-container transition-colors focus:underline decoration-2 underline-offset-4"
+          href="index.html#ubicacion"
+          >Ubicación</a
+        >
+      </div>
+      <div
+        class="font-body-md text-body-md text-surface text-center md:text-right relative z-10"
+      >
+        © 2024 Hermanos Ochoa. El auténtico sabor de Neza.
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggle = document.getElementById("mobile-menu-toggle");
+        var menu = document.getElementById("mobile-menu");
+        var icon = document.getElementById("mobile-menu-icon");
+        if (!toggle || !menu || !icon) return;
+
+        function closeMenu() {
+          menu.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Abrir menú");
+          icon.textContent = "menu";
+        }
+
+        toggle.addEventListener("click", function () {
+          var willOpen = menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+          toggle.setAttribute(
+            "aria-label",
+            willOpen ? "Cerrar menú" : "Abrir menú",
+          );
+          icon.textContent = willOpen ? "close" : "menu";
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (menu.classList.contains("hidden")) return;
+          if (event.target.closest("#mobile-menu, #mobile-menu-toggle")) return;
+          closeMenu();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeMenu();
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 768) closeMenu();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Taquería Hermanos Ochoa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#ffdea5",
+              "on-background": "#1b1c1c",
+              "surface-tint": "#a73922",
+              "surface-dim": "#dcd9d9",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary-container": "#6c4d00",
+              "inverse-primary": "#ffb4a4",
+              "surface-bright": "#fcf9f8",
+              secondary: "#7b5800",
+              error: "#ba1a1a",
+              "primary-fixed": "#ffdad3",
+              "on-surface": "#1b1c1c",
+              "on-secondary-fixed-variant": "#5d4200",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f0eded",
+              primary: "#a43720",
+              background: "#fcf9f8",
+              surface: "#fcf9f8",
+              "tertiary-fixed": "#8ff2fe",
+              tertiary: "#00666f",
+              "secondary-fixed-dim": "#fdbb24",
+              "surface-container-high": "#eae7e7",
+              "on-primary-fixed": "#3d0600",
+              "on-primary-fixed-variant": "#86220c",
+              "on-tertiary-fixed": "#001f23",
+              "secondary-container": "#fdbb24",
+              "inverse-surface": "#303030",
+              "on-surface-variant": "#58423d",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "surface-container-highest": "#e4e2e1",
+              "primary-container": "#c54f35",
+              "tertiary-container": "#00818c",
+              "on-error-container": "#93000a",
+              outline: "#8b716c",
+              "tertiary-fixed-dim": "#72d5e1",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f0f0",
+              "primary-fixed-dim": "#ffb4a4",
+              "outline-variant": "#dfc0b9",
+              "on-tertiary-fixed-variant": "#004f56",
+              "on-secondary-fixed": "#271900",
+              "on-tertiary-container": "#f6feff",
+              "surface-variant": "#e4e2e1",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "brand-terracotta": "#c54f35",
+              "brand-orange": "#e65100",
+              "brand-mustard": "#fdbb24",
+              "brand-lime": "#9ccc65",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "section-gap": "80px",
+              unit: "8px",
+              "margin-mobile": "16px",
+              "margin-desktop": "64px",
+            },
+            fontFamily: {
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Bricolage Grotesque"],
+              "headline-md": ["Bricolage Grotesque"],
+              "headline-lg": ["Bricolage Grotesque"],
+              "headline-lg-mobile": ["Bricolage Grotesque"],
+              "label-bold": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "body-md": [
+                "16px",
+                {
+                  lineHeight: "1.6",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "48px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "1.3",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "1.2",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-lg-mobile": [
+                "28px",
+                {
+                  lineHeight: "1.2",
+                  fontWeight: "800",
+                },
+              ],
+              "label-bold": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "1.6",
+                  fontWeight: "500",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .texture-bg {
+        background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.05"/%3E%3C/svg%3E');
+      }
+      .sticker-shadow {
+        box-shadow: 4px 4px 0px 0px rgba(27, 28, 28, 1);
+      }
+      .section-divider-top {
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"%3E%3Cpath fill="%231b1c1c" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"%3E%3C/path%3E%3C/svg%3E');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 60px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md texture-bg selection:bg-secondary-container selection:text-on-secondary-container"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="bg-surface border-b-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(27,28,28,1)] flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full sticky top-0 z-50 relative"
+    >
+      <div
+        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tighter italic"
+      >
+        Hermanos Ochoa
+      </div>
+      <div class="hidden md:flex gap-gutter items-center">
+        <a
+          class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors hover:scale-105 hover:rotate-1 duration-200"
+          href="menu.html"
+          >El Menú</a
+        >
+        <a
+          class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors hover:scale-105 hover:rotate-1 duration-200"
+          href="#historia"
+          >Nuestra Historia</a
+        >
+        <a
+          class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors hover:scale-105 hover:rotate-1 duration-200"
+          href="#ubicacion"
+          >Ubicación</a
+        >
+        <button
+          class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 border-2 border-on-surface shadow-[4px_4px_0px_0px_rgba(27,28,28,1)] hover:translate-y-1 hover:shadow-none transition-all uppercase tracking-wide"
+        >
+          Pedir por WhatsApp
+        </button>
+      </div>
+      <button
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Abrir menú"
+        class="md:hidden text-primary"
+        id="mobile-menu-toggle"
+        type="button"
+      >
+        <span
+          class="material-symbols-outlined"
+          style="font-variation-settings: 'FILL' 1;"
+          id="mobile-menu-icon"
+          >menu</span
+        >
+      </button>
+      <div
+        class="hidden md:hidden absolute top-full left-0 w-full bg-surface border-t-4 border-on-surface border-b-4 shadow-[8px_8px_0px_0px_rgba(27,28,28,1)] px-margin-mobile py-4"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col gap-4">
+          <a
+            class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+            href="menu.html"
+            >El Menú</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+            href="#historia"
+            >Nuestra Historia</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+            href="#ubicacion"
+            >Ubicación</a
+          >
+          <button
+            class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 border-2 border-on-surface shadow-[4px_4px_0px_0px_rgba(27,28,28,1)] uppercase tracking-wide text-left"
+            type="button"
+          >
+            Pedir por WhatsApp
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="px-margin-mobile md:px-margin-desktop py-section-gap relative overflow-hidden border-b-8 border-on-surface bg-[#FFD700]"
+      >
+        <div
+          class="absolute inset-0 z-0 bg-[#fdbb24]/75"
+          style="
+            background-image: linear-gradient(
+                rgba(253, 187, 36, 0.75),
+                rgba(253, 187, 36, 0.75)
+              ),
+              url('https://lh3.googleusercontent.com/aida-public/AB6AXuA98RhGLc5uB_Xm5ZA4m1Ep00uSoxI9h6nAP9TTH9Xn7CnI5VPOSD8yxv_S-Tfcv8c4eUS7jENWxRJ9WTTnChPGx7YUqcJNlANhHUcA4hbMxoM66mU0D6qujzLxQcA4xle3kjho6qp2WnTUQDXvlbWnzRqGM7i3b5fJYaFQo2dmst1LX5B79yTM_-2P3gFPRCNkrXBfizGidLxPAiAYaNXRI3Mm8iZfHkeAclaPu-1ix2u4gvOMoqUNNOUVIZBjbp0MZqhpNGCBLeXTbes');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+          "
+        ></div>
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center relative z-10"
+        >
+          <div class="relative z-10">
+            <div
+              class="inline-block bg-surface text-primary font-headline-md text-headline-md px-4 py-2 border-4 border-on-surface transform -rotate-3 mb-6 sticker-shadow"
+            >
+              ¡Pásele, Güero!
+            </div>
+            <h1
+              class="font-headline-xl text-headline-xl text-on-surface mb-6 uppercase tracking-tighter leading-none"
+              style="
+                text-shadow: rgb(255, 255, 255) 2px 2px 0px;
+                filter: drop-shadow(rgba(0, 0, 0, 0.1) 4px 4px 0px);
+              "
+            >
+              <span class="block transform -rotate-1 mb-2">¡El Auténtico</span
+              ><span
+                class="inline-block bg-brand-terracotta text-on-primary px-4 py-1 transform rotate-1 sticker-shadow border-4 border-on-surface"
+                >Sabor de Neza!</span
+              >
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface mb-8 max-w-lg border-l-4 border-on-surface pl-4 font-bold bg-surface/50 p-4 rounded border-4"
+            >
+              Tres generaciones sirviendo tacos con alma, humo y salsa que sí
+              pica. Tradición familiar desde 1985. No aceptamos imitaciones.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="bg-brand-orange text-on-primary font-label-bold text-label-bold px-8 py-4 border-4 border-on-surface sticker-shadow hover:translate-y-1 hover:shadow-none transition-all uppercase text-lg inline-block"
+                href="menu.html"
+              >
+                Ver Menú Completo
+              </a>
+            </div>
+          </div>
+          <div class="relative z-10 w-full h-64 md:h-96 lg:h-[500px]">
+            <div
+              class="absolute -inset-4 bg-brand-lime transform rotate-3 border-4 border-on-surface"
+            ></div>
+            <img
+              alt="Authentic tacos on a rustic wooden table"
+              class="relative z-10 w-full h-auto object-cover border-4 border-on-surface sticker-shadow brightness-110 contrast-125"
+              src="trompo.png"
+            />
+          </div>
+        </div>
+        <!-- Decorative Papel Picado SVG -->
+        <div
+          class="absolute top-0 right-0 w-64 h-64 opacity-20 pointer-events-none transform translate-x-1/2 -translate-y-1/2 text-on-surface"
+        >
+          <svg
+            fill="currentColor"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10,0 L20,10 L30,0 L40,10 L50,0 L60,10 L70,0 L80,10 L90,0 L100,10 L100,100 L0,100 Z"
+            ></path>
+            <circle cx="50" cy="50" fill="white" r="20"></circle>
+          </svg>
+        </div>
+      </section>
+      <!-- Featured Section -->
+      <section
+        class="bg-brand-terracotta py-section-gap px-margin-mobile md:px-margin-desktop border-b-8 border-on-surface relative"
+      >
+        <div
+          class="absolute inset-0 opacity-10 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYlsGvhZIc2DVlIZjEG011tIRV690tJWK0aBYuu3j60_u8XFlIH1Z6HKoSDNBcxAu-u8nMS5_x-LpoSoTeXuuhCOSuDxFrZ8IdaBWkvKTtdIxzT7_lWqe1CMVFmLIBw9G_BDTQ_VZ8TIzwB71jJxNWnp0gxIRzM09scj5gMN9LM3nI0mdQNpW7yHMo2vC-UItckPfVce4ndEj3eIhmHGBbBcbOSoA1wcwiO4guhnq6rKCULaiQoNK1CoWbWolA0FvDKRHJdUsGLo9O')] bg-cover bg-center bg-fixed"
+        ></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+          <div class="text-center mb-12">
+            <h2
+              class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary uppercase inline-block border-b-4 border-brand-mustard pb-2 bg-on-surface p-2 border-4 border-on-surface transform -rotate-1 sticker-shadow"
+            >
+              Las Joyas de la Corona
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+            <div class="order-2 md:order-1 relative">
+              <div
+                class="absolute -inset-2 bg-brand-mustard transform -rotate-2 border-4 border-on-surface"
+              ></div>
+              <img
+                alt="Close up of a delicious al pastor taco"
+                class="relative z-10 w-full h-auto object-cover border-4 border-on-surface sticker-shadow"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2UXtyfcdzKEX_wzvpMh8zntfj_sorT7Rau_nVkfxrgKr9q0OOyrVEePhl1naB3-aMOjJh8bCSs-6uTnY8CJzluFH9F0nfCF0vLG4_9ikFlgune-gIEpnghnqrNj3hUSZ3FSjqefUK25OaNsWRimW56UN7nECnah4LGd2E_cjX5jBGE0T2QF_CQfnOtoNWVopx1m4bJTpPw_6ZQBeOqZ6pRaXJ58FmLvsPXpQ3F2DthQTeITnlnE4xvC1x1kCIsXWyD9fvsz3KFXta9D8"
+              />
+            </div>
+            <div
+              class="order-1 md:order-2 bg-surface p-8 border-4 border-on-surface sticker-shadow transform md:translate-x-[-2rem] relative z-20"
+            >
+              <div
+                class="absolute -top-6 -right-6 bg-brand-lime text-on-surface font-headline-md text-headline-md p-4 border-4 border-on-surface sticker-shadow rounded-full h-24 w-24 flex items-center justify-center transform rotate-12"
+              >
+                #1
+              </div>
+              <h3
+                class="font-headline-md text-headline-md text-primary mb-2 uppercase"
+              >
+                Nustro Pastor, El Rey del Trompo
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Nuestro Pastor es leyenda. Carne marinada en nuestro adobo
+                secreto por 24 horas, cocinada a fuego lento en el trompo,
+                coronada con piña asada, cilantro y cebolla. Un bocado de cielo
+                callejero.
+              </p>
+              <div
+                class="flex items-center gap-2 text-brand-orange font-label-bold text-label-bold uppercase tracking-wider bg-brand-mustard inline-block px-3 py-1 border-2 border-on-surface transform -rotate-2"
+              >
+                <span class="material-symbols-outlined"
+                  >local_fire_department</span
+                >
+                ¡Sale calientito!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews Section -->
+      <section
+        class="bg-brand-lime py-section-gap px-margin-mobile md:px-margin-desktop border-b-8 border-on-surface"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16 relative">
+            <h2
+              class="font-headline-xl text-headline-xl text-on-surface uppercase inline-block bg-surface px-6 py-2 border-4 border-on-surface sticker-shadow transform -rotate-2"
+            >
+              ¿Qué dicen los clientes?
+            </h2>
+            <div class="absolute -top-8 left-1/4 transform -translate-x-1/2">
+              <span
+                class="bg-brand-orange text-white px-3 py-1 font-bold border-2 border-black transform rotate-12 inline-block"
+                >¡Puro 5 estrellas!</span
+              >
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div
+              class="bg-surface p-6 border-4 border-on-surface sticker-shadow transform rotate-1 hover:rotate-0 transition-all"
+            >
+              <div class="flex items-center gap-1 text-brand-orange mb-4">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+              </div>
+              <p class="font-body-md italic mb-4">
+                "El mejor pastor de todo Neza. Llevo viniendo desde hace 10 años
+                y la calidad nunca baja. Las salsas están para llorar de
+                felicidad."
+              </p>
+              <p class="font-label-bold uppercase">- Carlos M.</p>
+            </div>
+            <!-- Review 2 -->
+            <div
+              class="bg-surface p-6 border-4 border-on-surface sticker-shadow transform -rotate-1 hover:rotate-0 transition-all"
+            >
+              <div class="flex items-center gap-1 text-brand-orange mb-4">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+              </div>
+              <p class="font-body-md italic mb-4">
+                "Los alambres son una locura de grandes. Con uno comen dos, pero
+                están tan buenos que te lo acabas solo. 100% recomendados."
+              </p>
+              <p class="font-label-bold uppercase">- Ana P.</p>
+            </div>
+            <!-- Review 3 -->
+            <div
+              class="bg-surface p-6 border-4 border-on-surface sticker-shadow transform rotate-2 hover:rotate-0 transition-all"
+            >
+              <div class="flex items-center gap-1 text-brand-orange mb-4">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+              </div>
+              <p class="font-body-md italic mb-4">
+                "Atención súper rápida a pesar de que siempre está lleno. El
+                suadero se deshace en la boca. Un tesoro escondido."
+              </p>
+              <p class="font-label-bold uppercase">- Luis G.</p>
+            </div>
+            <!-- Review 4 -->
+            <div
+              class="bg-surface p-6 border-4 border-on-surface sticker-shadow transform -rotate-2 hover:rotate-0 transition-all"
+            >
+              <div class="flex items-center gap-1 text-brand-orange mb-4">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+              </div>
+              <p class="font-body-md italic mb-4">
+                "Las tortas cubanas son enormes y tienen de todo. Excelente
+                ambiente para venir con la familia el fin de semana."
+              </p>
+              <p class="font-label-bold uppercase">- Familia Rodríguez</p>
+            </div>
+            <!-- Review 5 -->
+            <div
+              class="bg-surface p-6 border-4 border-on-surface sticker-shadow transform rotate-1 hover:rotate-0 transition-all"
+            >
+              <div class="flex items-center gap-1 text-brand-orange mb-4">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+              </div>
+              <p class="font-body-md italic mb-4">
+                "Si no has probado sus frijoles charros, no has vivido. Todo
+                excelente, desde el servicio hasta la comida."
+              </p>
+              <p class="font-label-bold uppercase">- Roberto S.</p>
+            </div>
+            <!-- Review 6 -->
+            <div
+              class="bg-surface p-6 border-4 border-on-surface sticker-shadow transform -rotate-1 hover:rotate-0 transition-all"
+            >
+              <div class="flex items-center gap-1 text-brand-orange mb-4">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >star</span
+                >
+              </div>
+              <p class="font-body-md italic mb-4">
+                "Auténtico sabor callejero. Precios muy justos para la cantidad
+                y calidad que sirven. Mis respetos para los taqueros."
+              </p>
+              <p class="font-label-bold uppercase">- Diana V.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Historia Section -->
+      <section
+        class="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop border-b-8 border-on-surface relative"
+        id="historia"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-14 relative">
+            <h2
+              class="font-headline-xl text-headline-xl text-on-surface uppercase inline-block bg-brand-lime px-6 py-2 border-4 border-on-surface sticker-shadow transform rotate-1"
+            >
+              Nuestra Historia
+            </h2>
+            <span
+              class="absolute -top-6 right-1/4 bg-brand-orange text-on-primary px-3 py-1 border-2 border-on-surface font-label-bold uppercase transform -rotate-6"
+              >Desde 1985</span
+            >
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+            <div class="relative">
+              <div
+                class="absolute -inset-2 bg-brand-mustard transform -rotate-2 border-4 border-on-surface"
+              ></div>
+              <div
+                class="relative z-10 bg-surface border-4 border-on-surface sticker-shadow p-8 h-full"
+              >
+                <p
+                  class="font-body-lg text-body-lg text-on-surface mb-4 font-bold"
+                >
+                  Empezamos con un trompo, una plancha y muchas ganas de servir
+                  tacos bien hechos en la colonia.
+                </p>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant mb-4"
+                >
+                  Lo que arrancó como un puesto familiar se volvió punto de
+                  reunión del barrio. Recetas caseras, adobo propio y el mismo
+                  cuidado de siempre en cada orden.
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Hoy seguimos con la misma misión: sabor auténtico, porciones
+                  generosas y atención de casa. Esta historia sigue creciendo,
+                  taco por taco.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <article
+                class="bg-brand-terracotta text-on-primary p-6 border-4 border-on-surface sticker-shadow transform rotate-1"
+              >
+                <p class="font-label-bold uppercase tracking-wider mb-2">
+                  1985
+                </p>
+                <h3 class="font-headline-md text-headline-md uppercase mb-2">
+                  Nace la taqueria
+                </h3>
+                <p class="font-body-md">
+                  Primeras noches de servicio en Neza con receta familiar y
+                  salsa de la casa.
+                </p>
+              </article>
+
+              <article
+                class="bg-surface p-6 border-4 border-on-surface sticker-shadow transform -rotate-1"
+              >
+                <p
+                  class="font-label-bold uppercase tracking-wider mb-2 text-primary"
+                >
+                  2001
+                </p>
+                <h3
+                  class="font-headline-md text-headline-md uppercase mb-2 text-on-surface"
+                >
+                  Segunda generacion al frente
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Se amplía el menú, llegan nuevas especialidades y crece la
+                  tradición familiar.
+                </p>
+              </article>
+
+              <article
+                class="bg-brand-lime p-6 border-4 border-on-surface sticker-shadow transform rotate-2"
+              >
+                <p class="font-label-bold uppercase tracking-wider mb-2">Hoy</p>
+                <h3 class="font-headline-md text-headline-md uppercase mb-2">
+                  Mismo sazón, nueva etapa
+                </h3>
+                <p class="font-body-md text-on-surface">
+                  Seguimos perfeccionando cada taco y atendiendo a nuestros
+                  clientes como en casa.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Map Section -->
+      <section
+        class="bg-surface-container-high py-section-gap px-margin-mobile md:px-margin-desktop border-b-8 border-on-surface"
+        id="ubicacion"
+      >
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center"
+        >
+          <div class="flex-1">
+            <h2
+              class="font-headline-xl text-headline-xl text-on-surface uppercase mb-6 inline-block bg-brand-orange text-white px-4 py-2 border-4 border-on-surface transform rotate-1 sticker-shadow"
+            >
+              ¿Dónde andamos?
+            </h2>
+            <p
+              class="font-body-lg text-body-lg mb-4 text-on-surface-variant font-bold"
+            >
+              Cáele a echarte unos buenos tacos. Estamos en el corazón de Neza,
+              listos para atenderte como te mereces.
+            </p>
+            <div
+              class="bg-surface p-6 border-4 border-on-surface sticker-shadow inline-block transform -rotate-1 mt-4"
+            >
+              <p class="font-label-bold uppercase mb-2 text-primary">
+                Dirección:
+              </p>
+              <p class="font-body-md mb-4">
+                Av. Pantitlán 123, Col. Evolución,<br />Nezahualcóyotl, Estado
+                de México.
+              </p>
+              <p class="font-label-bold uppercase mb-2 text-primary">
+                Horario:
+              </p>
+              <p class="font-body-md">Lunes a Domingo: 5:00 PM - 3:00 AM</p>
+            </div>
+          </div>
+          <div class="flex-1 w-full relative">
+            <div
+              class="absolute -inset-2 bg-brand-mustard transform rotate-2 border-4 border-on-surface"
+            ></div>
+            <div
+              class="relative z-10 w-full h-[400px] border-4 border-on-surface sticker-shadow bg-surface"
+            >
+              <!-- Google Maps iframe embed placeholder -->
+              <iframe
+                allowfullscreen=""
+                height="100%"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.7156403902118!2d-99.0428476!3d19.418343399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc93b1253897%3A0xdc5cdc43f8140e51!2sTaquer%C3%ADa%20Hermanos%20Ochoa!5e0!3m2!1ses!2smx!4v1779453744670!5m2!1ses!2smx"
+                style="border: 0;"
+                width="100%"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-on-surface w-full flex flex-col md:flex-row justify-between items-center gap-gutter px-margin-mobile md:px-margin-desktop py-12 relative overflow-hidden"
+    >
+      <div
+        class="font-headline-md text-headline-md text-secondary-container relative z-10"
+      >
+        Hermanos Ochoa
+      </div>
+      <div class="flex flex-wrap justify-center gap-gutter relative z-10">
+        <a
+          class="font-body-md text-body-md text-surface-variant hover:text-secondary-container transition-colors focus:underline decoration-2 underline-offset-4"
+          href="#"
+          >Aviso de Privacidad</a
+        >
+        <a
+          class="font-body-md text-body-md text-surface-variant hover:text-secondary-container transition-colors focus:underline decoration-2 underline-offset-4"
+          href="#"
+          >Términos</a
+        >
+        <a
+          class="font-body-md text-body-md text-surface-variant hover:text-secondary-container transition-colors focus:underline decoration-2 underline-offset-4"
+          href="#"
+          >Contacto</a
+        >
+      </div>
+      <div
+        class="font-body-md text-body-md text-surface text-center md:text-right relative z-10"
+      >
+        © 2024 Hermanos Ochoa. El auténtico sabor de Neza.
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggle = document.getElementById("mobile-menu-toggle");
+        var menu = document.getElementById("mobile-menu");
+        var icon = document.getElementById("mobile-menu-icon");
+        if (!toggle || !menu || !icon) return;
+
+        function closeMenu() {
+          menu.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Abrir menú");
+          icon.textContent = "menu";
+        }
+
+        toggle.addEventListener("click", function () {
+          var willOpen = menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+          toggle.setAttribute(
+            "aria-label",
+            willOpen ? "Cerrar menú" : "Abrir menú",
+          );
+          icon.textContent = willOpen ? "close" : "menu";
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (menu.classList.contains("hidden")) return;
+          if (event.target.closest("#mobile-menu, #mobile-menu-toggle")) return;
+          closeMenu();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeMenu();
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 768) closeMenu();
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!window.gsap) return;
+
+        var prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (prefersReducedMotion) return;
+
+        var revealTargets = Array.from(
+          new Set(
+            gsap.utils.toArray(
+              "main section .sticker-shadow, main section h1, main section h2, main section h3, main section p, main section a[href], main section button, main section img, main section iframe",
+            ),
+          ),
+        );
+
+        gsap.set(revealTargets, { autoAlpha: 0, y: 28 });
+
+        var observer = new IntersectionObserver(
+          function (entries, obs) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+
+              gsap.to(entry.target, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.7,
+                ease: "power2.out",
+                clearProps: "opacity,visibility,transform",
+              });
+
+              obs.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.18, rootMargin: "0px 0px -10% 0px" },
+        );
+
+        revealTargets.forEach(function (el) {
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>
