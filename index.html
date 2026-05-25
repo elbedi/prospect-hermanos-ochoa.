@@ -158,6 +158,11 @@
       .sticker-shadow {
         box-shadow: 4px 4px 0px 0px rgba(27, 28, 28, 1);
       }
+      @media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+        .bg-fixed-mobile-safe {
+          background-attachment: scroll !important;
+        }
+      }
       .section-divider-top {
         background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"%3E%3Cpath fill="%231b1c1c" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"%3E%3C/path%3E%3C/svg%3E');
         background-size: cover;
@@ -256,7 +261,7 @@
         class="px-margin-mobile md:px-margin-desktop py-section-gap relative overflow-hidden border-b-8 border-on-surface bg-[#FFD700]"
       >
         <div
-          class="absolute inset-0 z-0 bg-[#fdbb24]/75"
+          class="absolute inset-0 z-0 bg-[#fdbb24]/75 bg-fixed-mobile-safe"
           style="
             background-image: linear-gradient(
                 rgba(253, 187, 36, 0.75),
@@ -337,7 +342,7 @@
         class="bg-brand-terracotta py-section-gap px-margin-mobile md:px-margin-desktop border-b-8 border-on-surface relative"
       >
         <div
-          class="absolute inset-0 opacity-10 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYlsGvhZIc2DVlIZjEG011tIRV690tJWK0aBYuu3j60_u8XFlIH1Z6HKoSDNBcxAu-u8nMS5_x-LpoSoTeXuuhCOSuDxFrZ8IdaBWkvKTtdIxzT7_lWqe1CMVFmLIBw9G_BDTQ_VZ8TIzwB71jJxNWnp0gxIRzM09scj5gMN9LM3nI0mdQNpW7yHMo2vC-UItckPfVce4ndEj3eIhmHGBbBcbOSoA1wcwiO4guhnq6rKCULaiQoNK1CoWbWolA0FvDKRHJdUsGLo9O')] bg-cover bg-center bg-fixed"
+          class="absolute inset-0 opacity-10 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYlsGvhZIc2DVlIZjEG011tIRV690tJWK0aBYuu3j60_u8XFlIH1Z6HKoSDNBcxAu-u8nMS5_x-LpoSoTeXuuhCOSuDxFrZ8IdaBWkvKTtdIxzT7_lWqe1CMVFmLIBw9G_BDTQ_VZ8TIzwB71jJxNWnp0gxIRzM09scj5gMN9LM3nI0mdQNpW7yHMo2vC-UItckPfVce4ndEj3eIhmHGBbBcbOSoA1wcwiO4guhnq6rKCULaiQoNK1CoWbWolA0FvDKRHJdUsGLo9O')] bg-cover bg-center bg-fixed bg-fixed-mobile-safe"
         ></div>
         <div class="max-w-7xl mx-auto relative z-10">
           <div class="text-center mb-12">
@@ -876,13 +881,25 @@
         ).matches;
         if (prefersReducedMotion) return;
 
+        var isMobileLike = window.matchMedia(
+          "(max-width: 767px), (hover: none) and (pointer: coarse)",
+        ).matches;
+
+        var revealSelector = isMobileLike
+          ? "main section > div, main section article, main section .sticker-shadow"
+          : "main section .sticker-shadow, main section h1, main section h2, main section h3, main section p, main section a[href], main section button, main section img, main section iframe";
+
         var revealTargets = Array.from(
           new Set(
-            gsap.utils.toArray(
-              "main section .sticker-shadow, main section h1, main section h2, main section h3, main section p, main section a[href], main section button, main section img, main section iframe",
-            ),
+            gsap.utils.toArray(revealSelector),
           ),
         );
+
+        if (isMobileLike) {
+          revealTargets = revealTargets.filter(function (el) {
+            return !el.closest("[aria-hidden='true']");
+          });
+        }
 
         gsap.set(revealTargets, { autoAlpha: 0, y: 28 });
 
@@ -894,7 +911,7 @@
               gsap.to(entry.target, {
                 autoAlpha: 1,
                 y: 0,
-                duration: 0.7,
+                duration: isMobileLike ? 0.45 : 0.7,
                 ease: "power2.out",
                 clearProps: "opacity,visibility,transform",
               });
