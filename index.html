@@ -292,6 +292,7 @@
               <span class="block transform -rotate-1 mb-2">¡El Auténtico</span
               ><span
                 class="inline-block bg-brand-terracotta text-on-primary px-4 py-1 transform rotate-1 sticker-shadow border-4 border-on-surface"
+                style="text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);"
                 >Sabor de Neza!</span
               >
             </h1>
@@ -890,9 +891,7 @@
           : "main section .sticker-shadow, main section h1, main section h2, main section h3, main section p, main section a[href], main section button, main section img, main section iframe";
 
         var revealTargets = Array.from(
-          new Set(
-            gsap.utils.toArray(revealSelector),
-          ),
+          new Set(gsap.utils.toArray(revealSelector)),
         );
 
         if (isMobileLike) {
